@@ -17,9 +17,15 @@ void Worker::operator()()
 				m_Pool.m_Tasks.pop_front();
 				locker.unlock();
 				(*task)();
+				/*
+				if (task->m_Callback != nullptr)
+				{
+					ITask* cBack = task->m_Callback;
+					(*cBack)();
+				}*/
 			}
-		else {
-			locker.unlock();
-		}
+			else {
+				locker.unlock();
+			}
 	}
 }

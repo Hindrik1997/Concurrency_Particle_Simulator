@@ -30,6 +30,12 @@
     <ClCompile Include="ManagedTask.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>
+    <ClCompile Include="WindowsFunctions.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="Particle.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="Threadpool.h">
@@ -45,6 +51,12 @@
       <Filter>Header Files</Filter>
     </ClInclude>
     <ClInclude Include="ManagedTask.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="WindowFunctions.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="Particle.h">
       <Filter>Header Files</Filter>
     </ClInclude>
   </ItemGroup>

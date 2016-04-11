@@ -1,18 +1,20 @@
 #pragma once
 #include "ITask.h"
-#include "ManagedTask.h"
 #include <functional>
-#include <memory>
 
 using std::function;
-using std::shared_ptr;
+class Threadpool;
 
-class Task : public ITask, public ManagedTask
+class Task : public ITask
 {
 public:
 	Task(function<void()> task);
 	~Task();
+private:
 	function<void()> m_Task;
-	void operator()();
+public:
+	void Execute(Threadpool& pool);
+	inline void operator()();
 };
 
+inline void Task::operator()() { m_Task(); }
